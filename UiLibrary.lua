@@ -90,6 +90,7 @@ do
     end
     --
     Utility.CLCheck = function()
+        repeat wait() until game:GetService("UserInputService"):IsWindowFocused()
         do
             local InputHandle = Utility.AddInstance("TextBox", {
                 Position = UDim2.new(0, 0, 0, 0)
