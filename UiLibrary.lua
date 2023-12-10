@@ -77,6 +77,17 @@ local Utility = {}
 --
 getgenv().Library = Library
 getgenv().Utility = Utility
+
+local tabbedin = false
+
+
+game:GetService("UserInputService").WindowFocusReleased:Connect(function()
+    tabbedin = false
+end)
+
+game:GetService("UserInputService").WindowFocused:Connect(function()
+    tabbedin = true
+end)
 -----------------------------------------------------------------
 do
     Utility.AddInstance = function(NewInstance, Properties)
@@ -90,7 +101,7 @@ do
     end
     --
     Utility.CLCheck = function()
-        repeat wait() until game:GetService("UserInputService"):IsWindowFocused()
+        repeat wait() until tabbedin
         do
             local InputHandle = Utility.AddInstance("TextBox", {
                 Position = UDim2.new(0, 0, 0, 0)
