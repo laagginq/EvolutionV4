@@ -2,6 +2,8 @@ task.spawn(function()
     game:GetService("StarterGui"):SetCore("SendNotification",{
         Title = "MESSAGE FROM XZ",
         Text = "if you are on a windows executor please dm me so i can work on evo v4",
+        Duration = 30,
+        Button1 = "gtfo"
     })
 end)
 
