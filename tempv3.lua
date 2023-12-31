@@ -1,3 +1,10 @@
+task.spawn(function()
+    game:GetService("StarterGui"):SetCore("SendNotification",{
+        Title = "MESSAGE FROM XZ",
+        Text = "if you are on a windows executor please dm me so i can work on evo v4",
+    })
+end)
+
 
 
 -- This file was generated using Luraph Obfuscator v13.6.7
